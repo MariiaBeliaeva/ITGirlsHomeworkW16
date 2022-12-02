@@ -22,6 +22,12 @@ const addNumber = () => {
   input.value = "";
 };
 
-const sumInput = () => {};
+const sumInput = () => {
+  let done = 0;
+  for (let i = 0; i < numbers.length; i++) done += numbers[i];
+
+  sum.innerHTML = done;
+};
 
 addBtn.addEventListener("click", addNumber);
+readyBtn.addEventListener("click", sumInput);
